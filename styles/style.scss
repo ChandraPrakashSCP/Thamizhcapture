@@ -1,0 +1,421 @@
+@import "./mainstyle";
+%center {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+%flex_column {
+  display: flex;
+  flex-direction: column;
+}
+
+%flex_row {
+  display: flex;
+  flex-direction: row;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  &_header {
+    flex: 1;
+    background-color: $secondary_color;
+    &_nav {
+      display: flex;
+      flex-direction: column;
+      // background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+      background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+      &_logo {
+        flex: 1;
+        list-style-type: none;
+        @extend %center;
+        img {
+          width: 300px;
+        }
+      }
+      &_navigate {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        // padding: 10px;
+        ul {
+          display: flex;
+          list-style-type: none;
+          font-size: 1em;
+          @extend %center;
+        }
+        li {
+          padding: 10px;
+          margin: 10px;
+          color: $secondary_color;
+          transition: transform 0.2s ease-out 0s;
+          &:hover {
+            transform: translateY(-10px);
+            background-color: #a6d1e6;
+            border-radius: 20px;
+          }
+        }
+        a {
+          // padding: 1px;
+          // margin: 5px;
+          text-decoration: none;
+          // border: red 2px;
+          &:hover {
+            color: $secondary_color;
+          }
+        }
+      }
+    }
+    &_section1 {
+      flex: 1;
+      display: flex;
+      flex-direction: row-reverse;
+      padding: 10px;
+      //   background-color: $main_color;
+      // background-image: linear-gradient(to right, #434343 0%, black 100%);
+      background-image: linear-gradient(to top, #ace0f9 0%, #fff1eb 100%);
+      &_left {
+        flex: 1;
+        @extend %center;
+        font-size: 2em;
+        color: $main_color;
+      }
+      &_right {
+        flex: 1;
+        @extend %center;
+        flex-wrap: wrap;
+        img {
+          width: 600px;
+          height: 700px;
+          border-radius: 20px;
+          object-fit: cover;
+        }
+      }
+    }
+    &_portfolio {
+      padding: 50px;
+      @extend %flex_column;
+      // align-items: center;
+      background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+      img {
+        // width: 400px;
+        max-width: 298px;
+        max-height: 224px;
+        // height: 400px;
+        object-fit: cover;
+        object-position: center;
+        // padding: 10px;
+        opacity: 0.6;
+        &:hover {
+          opacity: 1;
+          transition: 0.2s ease-in-out;
+        }
+      }
+      &_top {
+        flex: 1;
+        font-size: 3em;
+        @extend %center;
+      }
+      &_bottom {
+        flex: 1;
+        // max-width: 1500px;
+        // width: 100%;
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        &_card {
+          padding: 10px;
+          display: flex;
+          flex-wrap: wrap;
+          align-self: center;
+          justify-content: center;
+          &:hover {
+            img {
+              // transition: width 0.2s ease-in-out 0s;
+              // width: 420px;
+              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+          }
+        }
+      }
+    }
+    &_section2 {
+      flex: 1;
+      @extend %center;
+      flex-direction: column;
+      align-items: center;
+      background-image: linear-gradient(to top, #ace0f9 0%, #fff1eb 100%);
+      &_gallery {
+        flex: 1;
+        @extend %center;
+        flex-wrap: wrap;
+        padding: 50px;
+        font-size: 1.5em;
+        img {
+          max-width: 498px;
+          max-height: 480px;
+        }
+        color: $secondary_color;
+        &_1 {
+          // flex: 1;
+          @extend %center;
+          @extend %flex_column;
+          padding: 10px;
+          background-color: $main_color;
+          // border-radius: 20px;
+          &:hover {
+            transition: transform 0.2s ease-out 0s;
+            transform: rotate(2deg);
+          }
+          &_top {
+            flex: 1;
+            @extend %center;
+          }
+          &_bottom {
+            flex: 1;
+            @extend %center;
+            padding: 10px;
+          }
+        }
+        &_2 {
+          // flex: 1;
+          @extend %flex_column;
+          @extend %center;
+          padding: 10px;
+          margin: 20px;
+          background-color: $main_color;
+          &:hover {
+            transition: transform 0.2s ease-out 0s;
+            transform: rotate(-2deg);
+          }
+          // border-radius: 20px;
+          &_top {
+            flex: 1;
+            @extend %center;
+          }
+          &_bottom {
+            // flex: 1;
+            @extend %center;
+            padding: 10px;
+          }
+        }
+        &_3 {
+          // flex: 1;
+          @extend %center;
+          @extend %flex_column;
+          padding: 10px;
+          background-color: $main_color;
+          // border-radius: 20px;
+          &:hover {
+            transition: transform 0.2s ease-out 0s;
+            transform: rotate(2deg);
+          }
+          &_top {
+            flex: 1;
+            @extend %center;
+          }
+          &_bottom {
+            flex: 1;
+            @extend %center;
+            padding: 10px;
+          }
+        }
+      }
+    }
+    &_section3 {
+      flex: 1;
+      background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      &_enquiry_form {
+        flex: 1;
+        // padding: 40px;
+        &_top {
+          flex: 1;
+          td {
+            label {
+              font-size: 20px;
+            }
+            padding: 5px;
+          }
+          .content_input {
+            width: 400px;
+            height: 50px;
+            border: none;
+            outline: none;
+            padding-left: 25px;
+            font-weight: 300;
+            border-radius: 50px;
+            color: #666;
+            &_area {
+              height: 200px;
+              width: 500px;
+              border: none;
+              outline: none;
+              border-radius: 20px;
+              padding: 25px;
+              color: #666;
+            }
+          }
+          .content_input:focus {
+            border: 2px solid #31363f;
+          }
+          td button {
+            padding: 15px 30px;
+            border-radius: 50px;
+            border: none;
+            font-size: 20px;
+            background-color: #a0deff;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  &_footer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to top, #ace0f9 0%, #fff1eb 100%);
+    color: $main_color;
+    padding: 10px;
+    &_top {
+      flex: 1;
+      @extend %center;
+      img {
+        height: 20px;
+        margin: 10px;
+      }
+    }
+    &_bottom {
+      flex: 1;
+      @extend %center;
+      font-size: 1em;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .main {
+    &_header {
+      &_nav {
+        flex-direction: column;
+        font-size: 0.5em;
+        img {
+          width: 220px;
+        }
+        &_navigate {
+          justify-content: center;
+          font-size: 1.2em;
+          text-decoration: none;
+          padding: 0;
+          li {
+            // padding: 0px;
+          }
+        }
+      }
+      &_section1 {
+        flex-direction: column;
+        padding: 10px;
+        margin: 0;
+        img {
+          width: 350px;
+          height: 300px;
+        }
+        &_left {
+          flex: 1;
+          font-size: 1em;
+        }
+        &_right {
+          flex: 1;
+          @extend %center;
+          padding: 30px;
+        }
+      }
+      &_portfolio {
+        padding: 5px;
+        display: flex;
+        img {
+          max-width: 80px;
+          max-height: 124px;
+        }
+        &_top {
+          font-size: 2em;
+        }
+        &_bottom {
+          flex-direction: row;
+          &card {
+            flex-direction: row;
+          }
+        }
+      }
+      &_section2 {
+        padding: 20px;
+        &_gallery {
+          flex-direction: column;
+          font-size: 1.2em;
+          img {
+            opacity: 1;
+            max-width: 298px;
+            max-height: 224px;
+          }
+          &_1 {
+            background-color: $main_color;
+            color: $secondary_color;
+            &_bottom {
+              padding: 10px;
+            }
+          }
+          &_2 {
+            background-color: $main_color;
+            color: $secondary_color;
+            margin: 10px 0;
+            &_bottom {
+              padding: 10px;
+            }
+          }
+          &_3 {
+            background-color: $main_color;
+            color: $secondary_color;
+            &_bottom {
+              padding: 10px;
+            }
+          }
+        }
+      }
+      &_section3 {
+        &_enquiry_form {
+          table {
+            padding: 10px;
+          }
+          td {
+            text-align: center;
+            padding: 10px;
+            label {
+              font-size: 20px;
+            }
+          }
+          .content_input {
+            width: 300px;
+            height: 40px;
+            padding-left: 5;
+            &_area {
+              height: 200px;
+              width: 300px;
+            }
+          }
+        }
+      }
+    }
+    &_footer {
+      font-size: 0.7em;
+    }
+  }
+}
